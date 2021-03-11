@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn libraryms.wsgi --log-file -
+web: gunicorn efs_rest.wsgi --log-file -
