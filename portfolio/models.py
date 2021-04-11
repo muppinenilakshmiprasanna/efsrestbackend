@@ -76,6 +76,9 @@ class Stock(models.Model):
 
 
 class MutualFunds(models.Model):
+    class Meta:
+        verbose_name = 'MutualFunds'
+        verbose_name_plural = 'MutualFunds'
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='mutualfunds')
     symbol = models.CharField(max_length=10)
     name = models.CharField(max_length=50)

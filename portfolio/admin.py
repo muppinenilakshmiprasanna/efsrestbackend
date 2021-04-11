@@ -22,6 +22,7 @@ class StockList(admin.ModelAdmin):
     search_fields = ('customer','symbol', 'name')
     ordering = ['customer']
 
+
 class FundList(admin.ModelAdmin):
     list_display = ('customer','symbol', 'name', 'description', 'purchase_price')
     list_filter = ('customer','symbol', 'name')
