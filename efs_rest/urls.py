@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import path
-
 from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token
 from portfolio import views
@@ -17,5 +16,9 @@ urlpatterns = [
     url(r'^api/investments/(?P<pk>[0-9]+)$', views.getInvestment),
     path('stocks/', views.stock_list),
     url(r'^api/stocks/$', views.stock_list),
-    url(r'^api/stocks/(?P<pk>[0-9]+)$', views.getStock)
+    url(r'^api/stocks/(?P<pk>[0-9]+)$', views.getStock),
+    path('funds/', views.fund_list),
+    url(r'^api/funds/$', views.fund_list),
+    url(r'^api/funds/(?P<pk>[0-9]+)$', views.getFund),
+    url(r'^api/signup/', views.signup),
 ]
